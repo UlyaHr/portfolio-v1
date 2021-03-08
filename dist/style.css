@@ -3,7 +3,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -14,7 +16,139 @@ body {
   line-height: 1.3;
 }
 
-h1 {
-  color: red;
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+
+.container--pall {
+  padding: 18px 16px;
+}
+
+.container--px {
+  padding-left: 1.375rem;
+  padding-right: 1.375rem;
+}
+
+.container--py {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.container--pt {
+  padding-top: 2.5rem;
+}
+
+.container--pr {
+  padding-right: 1.375rem;
+}
+
+.container--pb {
+  padding-bottom: 2.5rem;
+}
+
+.container--pl {
+  padding-left: 1.375rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jb {
+  justify-content: space-between;
+}
+
+.flex-jc {
+  justify-content: center;
+}
+
+.flex-ac {
+  align-items: center;
+}
+
+.header {
+  background-color: #eee;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header__logo {
+  font-size: 34px;
+  font-weight: 700;
+  color: #333;
+}
+
+.header__menu {
+  display: none;
+  --color: #333;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header__menu svg {
+  width: 64px;
+  height: 48px;
+  top: -6px;
+  left: -14px;
+  stroke: var(--color);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  display: block;
+  position: absolute;
+}
+
+.header__menu svg path {
+  transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, 0.85s) var(--easing, ease) var(--delay, 0s);
+  stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+  stroke-dashoffset: var(--offset, 126px);
+  transform: translateZ(0);
+}
+
+.header__menu svg path:nth-child(2) {
+  --duration: .7s;
+  --easing: ease-in;
+  --offset: 100px;
+  --array-2: 74px;
+}
+
+.header__menu svg path:nth-child(3) {
+  --offset: 133px;
+  --array-2: 107px;
+}
+
+.header__menu.active svg path {
+  --offset: 57px;
+}
+
+.header__menu.active svg path:nth-child(1), .header__menu.active svg path:nth-child(3) {
+  --delay: .15s;
+  --easing: cubic-bezier(.2, .4, .2, 1.1);
+}
+
+.header__menu.active svg path:nth-child(2) {
+  --duration: .4s;
+  --offset: 2px;
+  --array-1: 1px;
+}
+
+.header__menu.active svg path:nth-child(3) {
+  --offset: 58px;
 }
 /*# sourceMappingURL=style.css.map */
