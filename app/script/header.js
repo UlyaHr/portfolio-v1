@@ -1,5 +1,6 @@
 export function Header() {
   const navbar = document.querySelector('.header');
+  const logo = document.querySelector('.header__logo')
   const burger =  document.querySelectorAll('.header__menu');
   const overlay = document.querySelector('.overlay');
   const menu = document.querySelector(".header__links");
@@ -26,10 +27,26 @@ export function Header() {
       burgerClick()
     }
   }
+
+  function clickHandler(e) {
+    e.preventDefault()
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop;
+
+    scroll({
+      top: offsetTop,
+      behavior: "smooth"
+    });
+    menuClick()
+  }
   
   menuLink.forEach(link => {
-    link.addEventListener('click', ()=> menuClick())
+    link.addEventListener('click', clickHandler)
   })
+
+  logo.addEventListener('click', clickHandler)
+
+  
 
   burger.forEach(btn => {
     btn.addEventListener('click', () => {
