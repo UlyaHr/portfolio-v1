@@ -45,6 +45,13 @@
     background-color: $lightshade;
     box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
 
+    a {
+      color: $darkshade;
+    }
+
+    .header__menu svg {
+      stroke: $darkshade;
+    }
   }
   
 
@@ -73,7 +80,7 @@
       height: 48px;
       top: -6px;
       left: -14px;
-      stroke: $darkshade;
+      stroke: $lightshade;
       stroke-width: 4px;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -168,13 +175,13 @@
           right: 0;
           bottom: -1px;
           height: 5px;
-          background: $tertiary;
+          background: $gradient;
           opacity: 0;
           transition: opacity 300ms ease-in-out;
         }
 
         &:hover {
-          color: $tertiary;
+          color: $maincolor;
 
           &::before {
             opacity: 1;
@@ -185,8 +192,13 @@
 
     &--scrolled {
       a {
-        color: $darkshade !important;
+        color: $darkshade;
+      }
+
+      .header__links a {
+        color: $darkshade;
       }
     }
+
   }
 }
