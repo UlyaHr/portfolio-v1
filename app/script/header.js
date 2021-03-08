@@ -2,7 +2,7 @@ export function Header() {
   const navbar = document.querySelector('.header');
   const burger =  document.querySelectorAll('.header__menu');
   const overlay = document.querySelector('.overlay');
-  const menu = document.querySelector(".header__links")
+  const menu = document.querySelector(".header__links");
   const menuLink = menu.childNodes;
 
   const burgerClick = () => {
@@ -32,7 +32,7 @@ export function Header() {
   })
 
   burger.forEach(btn => {
-    btn.addEventListener('click', e => {
+    btn.addEventListener('click', () => {
       btn.classList.toggle('active');
       burgerClick();
     });

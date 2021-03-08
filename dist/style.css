@@ -154,11 +154,16 @@ a:hover {
   padding: 0.8125rem 2.1522rem;
   border-radius: 1.5rem;
   border: none;
-  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #f85032, #e73827);
   color: #f1f4fd;
+  opacity: 0.8;
   font-size: 0.875rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.button:hover {
+  opacity: 1;
 }
 
 @media (max-width: 64em) {
@@ -312,6 +317,14 @@ a:hover {
   color: #f1f4fd;
 }
 
+.header__cta {
+  opacity: 0.8;
+}
+
+.header__cta:hover {
+  opacity: 1;
+}
+
 .overlay {
   visibility: hidden;
   position: fixed;
@@ -349,7 +362,7 @@ a:hover {
     right: 0;
     bottom: -1px;
     height: 5px;
-    background: linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to right, #f85032, #e73827);
     opacity: 0;
     transition: opacity 300ms ease-in-out;
   }
@@ -372,6 +385,10 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hero {
+  background: linear-gradient(to right, #76b852, #8dc26f);
 }
 
 .about {
@@ -520,7 +537,6 @@ section {
 
 .footer__cta .button:hover {
   color: #f1f4fd;
-  opacity: 0.7;
 }
 
 .footer__copyright {

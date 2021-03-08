@@ -106,6 +106,7 @@
   }
 
   &__cta {
+
     @include breakpoint-up(large) {
       grid-area: cta;
       justify-self: end;
@@ -118,7 +119,6 @@
 
       &:hover {
         color: $lightshade;
-        opacity: 0.7;
       }
     }
   }

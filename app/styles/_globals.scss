@@ -125,9 +125,14 @@ a:hover {
   border: none;
   background: $gradient;
   color: $lightshade;
+  opacity: 0.8;
   font-size: $font-sm;
   font-weight: 700;
   cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 // Visibility
