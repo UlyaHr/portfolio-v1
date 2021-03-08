@@ -73,3 +73,24 @@ a:hover {
     align-items: center;
   }
 }
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(large) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
+}

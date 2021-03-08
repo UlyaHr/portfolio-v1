@@ -4,16 +4,54 @@
   width: 100%;
   transition: all 200ms ease-in-out;
 
+  &.menu-clicked {
+    .header__links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 88px;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      margin: 0 auto;
+      width: 326px;
+      padding: 35px 0;
+      background-color: $lightshade;
+      border-radius: 4px;
+
+      > a {
+        text-align: center;
+        font-size: $font-sm;
+        color: $darkshade;
+        transition: color 300ms ease-in-out;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+
+        &:hover {
+          color: $maincolor;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
   &--scrolled {
     background-color: $lightshade;
     box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
+
   }
   
 
   &__logo {
     font-size: 30px;
     font-weight: 700;
-    color: $darkshade;
+    color: $lightshade;
   }
 
   &__menu {
@@ -80,16 +118,75 @@
             }
         }
     }
-  
+
   }
 
   &__links {
-    // display: none;
     a {
-      padding-left: 15px;
-      font-size: $font-sm;
-      color: $darkshade;
+      color: $lightshade;
+    }
+  }
+}
+
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  z-index: 9998;
+  top: 75px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #2d314d;
+  background: linear-gradient(#2d314d, transparent);
+}
+
+.header {
+  @include breakpoint-up(large) {
+    > nav {
+      height: 5rem;
     }
 
+    .header__links {
+      animation: none !important;
+
+      > a {
+        display: inline-block !important;
+        font-size: $font-sm;
+        color: $lightshade;
+        line-height: 5rem;
+        position: relative;
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -1px;
+          height: 5px;
+          background: $tertiary;
+          opacity: 0;
+          transition: opacity 300ms ease-in-out;
+        }
+
+        &:hover {
+          color: $tertiary;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &--scrolled {
+      a {
+        color: $darkshade !important;
+      }
+    }
   }
 }
