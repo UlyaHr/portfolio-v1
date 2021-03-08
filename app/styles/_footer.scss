@@ -124,6 +124,9 @@
   }
 
   &__copyright {
+    .fas {
+      color: #EA7384;
+    }
     
     @include breakpoint-up(large) {
       grid-area: copyright;
