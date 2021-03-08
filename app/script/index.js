@@ -1,9 +1,6 @@
-console.log('Hello World!');
+import { Header } from './header.js';
 
-const burgerMenu =  document.querySelectorAll('.header__menu');
-
-burgerMenu.forEach(btn => {
-  btn.addEventListener('click', e => {
-      btn.classList.toggle('active');
-  });
+window.addEventListener('DOMContentLoaded', (event) => {
+  Header();
 });
+

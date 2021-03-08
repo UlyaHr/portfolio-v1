@@ -1,16 +1,23 @@
 .header {
-  background-color: #eee;
-  box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 200ms ease-in-out;
+
+  &--scrolled {
+    background-color: $lightshade;
+    box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
+  }
+  
 
   &__logo {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 700;
-    color: #333;
+    color: $darkshade;
   }
 
   &__menu {
-    display: none;
-    --color: #333;
+    // display: none;
     width: 36px;
     height: 36px;
     padding: 0;
@@ -24,33 +31,33 @@
     -webkit-tap-highlight-color: transparent;
 
     svg {
-        width: 64px;
-        height: 48px;
-        top: -6px;
-        left: -14px;
-        stroke: var(--color);
-        stroke-width: 4px;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        fill: none;
-        display: block;
-        position: absolute;
-        path {
-            transition: stroke-dasharray var(--duration, .85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, .85s) var(--easing, ease) var(--delay, 0s);
-            stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
-            stroke-dashoffset: var(--offset, 126px);
-            transform: translateZ(0);
-            &:nth-child(2) {
-                --duration: .7s;
-                --easing: ease-in;
-                --offset: 100px;
-                --array-2: 74px;
-            }
-            &:nth-child(3) {
-                --offset: 133px;
-                --array-2: 107px;
-            }
-        }
+      width: 64px;
+      height: 48px;
+      top: -6px;
+      left: -14px;
+      stroke: $darkshade;
+      stroke-width: 4px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      display: block;
+      position: absolute;
+      path {
+          transition: stroke-dasharray var(--duration, .85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, .85s) var(--easing, ease) var(--delay, 0s);
+          stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+          stroke-dashoffset: var(--offset, 126px);
+          transform: translateZ(0);
+          &:nth-child(2) {
+              --duration: .7s;
+              --easing: ease-in;
+              --offset: 100px;
+              --array-2: 74px;
+          }
+          &:nth-child(3) {
+              --offset: 133px;
+              --array-2: 107px;
+          }
+      }
     }
     
     &.active {
@@ -78,6 +85,11 @@
 
   &__links {
     // display: none;
+    a {
+      padding-left: 15px;
+      font-size: $font-sm;
+      color: $darkshade;
+    }
 
   }
 }

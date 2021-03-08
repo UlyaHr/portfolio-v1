@@ -1,0 +1,18 @@
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  background-color: $maincolor;
+}
+
+.features {
+  background-color: $tertiary;
+}
+
+.contact {
+  background-color: $secondary;
+}
