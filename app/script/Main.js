@@ -19,8 +19,8 @@ export function Main() {
 
       if(entry.isIntersecting) {
         bubble.style.setProperty('width',`${direction.width}px`)
-        bubble.style.setProperty('height', '5px')
-        bubble.style.setProperty('top', '76px')
+        bubble.style.setProperty('height', '4px')
+        bubble.style.setProperty('top', '53px')
         bubble.style.setProperty('left', `${direction.left}px`)
       }
     })

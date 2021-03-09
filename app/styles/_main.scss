@@ -6,7 +6,17 @@ section {
 }
 
 .hero {
-  background: $hero;
+  flex-direction: column;
+  background: $darkshade;
+  position: relative;
+
+  // &__content {
+  //   min-height: 100vh;
+  // }
+
+  &__divider {
+    @include section-divider;
+  }
 }
 .about {
   background-color: $secondary;
