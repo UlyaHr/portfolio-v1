@@ -6,6 +6,7 @@ export function Header() {
   const burger =  document.querySelectorAll('.header__menu');
   const overlay = document.querySelector('.overlay');
   const menu = document.querySelector(".header__links");
+  const darkmode = document.querySelector(".darkmode__toggle")
   const menuLink = menu.childNodes;
 
   const burgerClick = () => {
@@ -15,11 +16,15 @@ export function Header() {
         overlay.classList.remove('fade-out')
         menu.classList.add('fade-in')
         menu.classList.remove('fade-out')
+        darkmode.classList.add('fade-in')
+        darkmode.classList.remove('fade-out')
       } else {
         overlay.classList.add('fade-out')
         overlay.classList.remove('fade-in')
         menu.classList.add('fade-out')
         menu.classList.remove('fade-in')
+        darkmode.classList.add('fade-out')
+        darkmode.classList.remove('fade-in')
       }
   }
   

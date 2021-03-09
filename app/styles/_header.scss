@@ -14,10 +14,11 @@
       top: 100px;
       left: 0;
       right: 0;
-      z-index: 9999;
+      z-index: 9998;
       margin: 0 auto;
       width: 326px;
-      padding: 35px 0;
+      padding-top: 35px;
+      padding-bottom: 105px;
       background-color: $lightshade;
       border-radius: 4px;
 
@@ -37,9 +38,21 @@
           }
         }
       }
-
-      
     }
+
+    .darkmode__toggle {
+      display: block;
+      position: absolute;
+      top: 360px;
+      left: 0;
+      right: 0;
+      width: 90px;
+      margin: 0 auto;
+      z-index: 9999;
+
+      @include darkmode-toggler
+    }
+    
   }
 
   &--scrolled {
@@ -147,7 +160,7 @@
 .overlay {
   visibility: hidden;
   position: fixed;
-  z-index: 9998;
+  z-index: 9997;
   top: 75px;
   right: 0;
   bottom: 0;
@@ -155,6 +168,8 @@
   background: #2d314d;
   background: linear-gradient(#2d314d, transparent);
 }
+
+
 
 .header {
   @include breakpoint-up(large) {
@@ -216,6 +231,12 @@
       .header__links a {
         color: $darkshade;
       }
+    }
+
+    .darkmode__toggle {
+      display: block;
+
+      @include darkmode-toggler;
     }
 
   }
