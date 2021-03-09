@@ -40,6 +40,8 @@
           }
         }
       }
+
+      
     }
   }
 
@@ -197,6 +199,13 @@
             opacity: 1;
           }
         }
+      }
+
+      &--active {
+        position: absolute;
+        z-index: -2;
+        background: $activeMenu;
+        transition: all 200ms ease-in-out;
       }
     }
 

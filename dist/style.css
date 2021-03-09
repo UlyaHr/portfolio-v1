@@ -371,6 +371,12 @@ a:hover {
   .header .header__links > a:hover::before {
     opacity: 1;
   }
+  .header .header__links--active {
+    position: absolute;
+    z-index: -2;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    transition: all 200ms ease-in-out;
+  }
   .header--scrolled a {
     color: #2F4858;
   }
