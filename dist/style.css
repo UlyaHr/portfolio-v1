@@ -211,14 +211,12 @@ a:hover {
 }
 
 .header.menu-clicked .header__links > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: center;
   font-size: 0.875rem;
   color: #2F4858;
   transition: color 300ms ease-in-out;
-}
-
-.header.menu-clicked .header__links > a:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .header.menu-clicked .header__links > a:hover {

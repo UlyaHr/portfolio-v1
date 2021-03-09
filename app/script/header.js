@@ -1,3 +1,5 @@
+import { smooothScroll } from './smoothScroll.js';
+
 export function Header() {
   const navbar = document.querySelector('.header');
   const logo = document.querySelector('.header__logo')
@@ -27,26 +29,18 @@ export function Header() {
       burgerClick()
     }
   }
-
-  function clickHandler(e) {
-    e.preventDefault()
-    const href = this.getAttribute("href");
-    const offsetTop = document.querySelector(href).offsetTop;
-
-    scroll({
-      top: offsetTop,
-      behavior: "smooth"
-    });
-    menuClick()
-  }
   
   menuLink.forEach(link => {
-    link.addEventListener('click', clickHandler)
+    link.addEventListener('click', (e) => {
+      smooothScroll(e);
+      menuClick();
+    })
   })
 
-  logo.addEventListener('click', clickHandler)
-
-  
+  logo.addEventListener('click', (e) => {
+    smooothScroll(e);
+    menuClick();
+  })
 
   burger.forEach(btn => {
     btn.addEventListener('click', () => {

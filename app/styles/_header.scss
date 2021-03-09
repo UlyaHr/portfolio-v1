@@ -21,14 +21,16 @@
       border-radius: 4px;
 
       > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
         text-align: center;
         font-size: $font-sm;
         color: $darkshade;
         transition: color 300ms ease-in-out;
 
-        &:not(:last-child) {
-          margin-bottom: 30px;
-        }
+        // &:not(:last-child) {
+        //   margin-bottom: 30px;
+        // }
 
         &:hover {
           color: $maincolor;
