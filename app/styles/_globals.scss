@@ -11,18 +11,21 @@ html {
 }
 
 :root {
-  --color-main: #{$tertiary};
-  --color-sec: #{$secondary};
-  --color-background: #{$lightshade};
-  --color-text: #{$darkshade};
-  --color-accent: #{$accent};
+  --color-main: #{$cyan-color};
+  --color-sec: #{$orange-color};
+  --color-background: #{$bg-light};
+  --color-background2: #{$bg-light};
+  --color-text: #{$text-sub};
+  --color-accent: #{$green-color};
 }
 
 .dark {
-  --color-main: #{$secondary};
-  --color-sec: #{$tertiary};
-  --color-background: #{$darkshade};
-  --color-text: #{$lightshade};
+  --color-main: #{$violet-color};
+  // --color-sec: #{$cyan-color};
+  --color-background: #{$bg-dark2};
+  --color-background2: #{$bg-dark};
+  --color-text: #{$bg-light};
+  --color-accent: #{$red-color};
 }
 
 body {
