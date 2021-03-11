@@ -10,6 +10,21 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  --color-main: #{$tertiary};
+  --color-sec: #{$secondary};
+  --color-background: #{$lightshade};
+  --color-text: #{$darkshade};
+  --color-accent: #{$accent};
+}
+
+.dark {
+  --color-main: #{$secondary};
+  --color-sec: #{$tertiary};
+  --color-background: #{$darkshade};
+  --color-text: #{$lightshade};
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,7 +38,7 @@ h2,
 h3 {
   font-weight: 300;
   line-height: 1.15;
-  color: $lightshade;
+  color: var(--color-main);
   margin-top: 0;
 }
 

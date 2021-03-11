@@ -19,7 +19,7 @@
       width: 326px;
       padding-top: 35px;
       padding-bottom: 105px;
-      background-color: $lightshade;
+      background-color: var(--color-background);
       border-radius: 4px;
 
       > a {
@@ -27,11 +27,11 @@
         padding-bottom: 15px;
         text-align: center;
         font-size: $font-md;
-        color: $darkshade;
+        color: var(--color-text);
         transition: color 300ms ease-in-out;
 
         &:hover {
-          color: $maincolor;
+          color: var(--color-main);
 
           &::before {
             opacity: 1;
@@ -56,15 +56,15 @@
   }
 
   &--scrolled {
-    background-color: $lightshade;
+    background-color: var(--color-background);
     box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
 
     a {
-      color: $darkshade;
+      color: var(--color-text);
     }
 
     .header__menu svg {
-      stroke: $darkshade;
+      stroke: var(--color-text);
     }
   }
   
@@ -72,7 +72,7 @@
   &__logo {
     font-size: 30px;
     font-weight: 700;
-    color: $lightshade;
+    color: var(--color-text);
   }
 
   &__menu {
@@ -94,7 +94,7 @@
       height: 48px;
       top: -6px;
       left: -14px;
-      stroke: $lightshade;
+      stroke: var(--color-text);
       stroke-width: 4px;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -144,7 +144,7 @@
 
   &__links {
     a {
-      color: $lightshade;
+      color: var(--color-text);
     }
   }
 
@@ -183,7 +183,7 @@
       > a {
         display: inline-block !important;
         font-size: $font-sm;
-        color: $lightshade;
+        color: var(--color-text);
         line-height: 5rem;
         position: relative;
 
@@ -206,7 +206,7 @@
         }
 
         &:hover {
-          color: $maincolor;
+          color: var(--color-main);
 
           &::before {
             opacity: 1;
@@ -224,12 +224,13 @@
     }
 
     &--scrolled {
+      background-color: var(--color-background);
       a {
-        color: $darkshade;
+        color: var(--color-text);
       }
 
       .header__links a {
-        color: $darkshade;
+        color: var(--color-text);
       }
     }
 

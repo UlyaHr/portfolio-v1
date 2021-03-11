@@ -1,4 +1,5 @@
 import { smooothScroll } from './smoothScroll.js';
+import { darkMode } from './darkMode.js';
 
 export function Header() {
   const navbar = document.querySelector('.header');
@@ -7,6 +8,7 @@ export function Header() {
   const overlay = document.querySelector('.overlay');
   const menu = document.querySelector(".header__links");
   const darkmode = document.querySelector(".darkmode__toggle")
+  const darkmodeInput = document.querySelector('.darkmode__toggle .chk')
   const menuLink = menu.childNodes;
 
   const burgerClick = () => {
@@ -52,6 +54,10 @@ export function Header() {
       btn.classList.toggle('active');
       burgerClick();
     });
+  });
+
+  darkmodeInput.addEventListener('click', () => {
+    darkMode();
   });
 
   window.addEventListener('scroll', () => {

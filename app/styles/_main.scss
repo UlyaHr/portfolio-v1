@@ -3,11 +3,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 .hero {
   flex-direction: column;
-  background: $darkshade;
+  background: var(--color-background);
   position: relative;
 
   // &__content {
@@ -16,16 +18,58 @@ section {
 
   &__divider {
     @include section-divider;
+
+    .parallax1 use{
+      fill: var(--color-sec);
+      opacity: 0.4;
+    }
+    .parallax2 use{
+      fill: var(--color-accent);
+      opacity: 0.4;
+    }
+    .parallax3 use{
+      fill: var(--color-text);
+      opacity: 0.4;
+    }
+    .parallax4 use{
+      fill: var(--color-main);
+    }
   }
 }
 .about {
-  background-color: $secondary;
+  background-color: var(--color-main);
+  flex-direction: column;
+  position: relative;
+
+  h1 {
+    color: $lightshade;
+  }
+
+  &__divider {
+    @include section-divider;
+
+    .parallax1 use{
+      fill: var(--color-text);
+      opacity: 0.4;
+    }
+    .parallax2 use{
+      fill: var(--color-sec);
+      opacity: 0.4;
+    }
+    .parallax3 use{
+      fill: var(--color-accent);
+      opacity: 0.4;
+    }
+    .parallax4 use{
+      fill: var(--color-background);
+    }
+  }
 }
 
 .features {
-  background-color: $tertiary;
+  background: var(--color-background);
 }
 
 .contact {
-  background-color: $maincolor;
+  background: $gradient;
 }
