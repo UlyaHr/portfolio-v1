@@ -27,6 +27,9 @@ export function Header() {
         darkmode.classList.add('fade-out')
         darkmode.classList.remove('fade-in')
       }
+    if (!navbar.classList.contains('header--scrolled')) {
+      navbar.classList.add('header--scrolled');
+    }
   }
   
   const menuClick = () => {

@@ -11,19 +11,18 @@ html {
 }
 
 :root {
-  --color-main: #{$cyan-color};
+  --color-main: #{$violet-color};
   --color-sec: #{$orange-color};
   --color-background: #{$bg-light};
-  --color-background2: #{$bg-light};
+  --color-background2: #{$bg-light2};
   --color-text: #{$text-sub};
   --color-accent: #{$green-color};
 }
 
 .dark {
-  --color-main: #{$violet-color};
-  // --color-sec: #{$cyan-color};
-  --color-background: #{$bg-dark2};
-  --color-background2: #{$bg-dark};
+  --color-main: #{$cyan-color};
+  --color-background: #{$bg-dark};
+  --color-background2: #{$bg-dark2};
   --color-text: #{$bg-light};
   --color-accent: #{$red-color};
 }
@@ -39,7 +38,7 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.15;
   color: var(--color-main);
   margin-top: 0;
@@ -167,10 +166,4 @@ a:hover {
   }
 }
 
-.fade-in {
-  animation: fade-in 300ms ease-in-out forwards;
-}
 
-.fade-out {
-  animation: fade-out 300ms ease-in-out forwards;
-}

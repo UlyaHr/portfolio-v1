@@ -12,10 +12,6 @@ section {
   background: var(--color-background);
   position: relative;
 
-  // &__content {
-  //   min-height: 100vh;
-  // }
-
   &__divider {
     @include section-divider;
 
@@ -32,12 +28,12 @@ section {
       opacity: 0.4;
     }
     .parallax4 use{
-      fill: var(--color-main);
+      fill: #0072ff;
     }
   }
 }
 .about {
-  background-color: var(--color-main);
+  background: linear-gradient(to top, #00c6ff, #0072ff);
   flex-direction: column;
   position: relative;
 
@@ -71,5 +67,54 @@ section {
 }
 
 .contact {
-  background: $gradient;
+  // background: $gradient;
+  flex-direction: column;
+  form { max-width:420px; margin:50px auto; }
+
+  .feedback-input {
+    color:var(--color-text);
+    font-family: "Jura", sans-serif;;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid var(--color-main);
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+  }
+
+  .feedback-input:focus { 
+    border:2px solid $green-color; 
+    box-shadow:0 0 3px $green-color;
+  }
+
+  .feedback-input::placeholder { color: var(--color-text);}
+
+  textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+  }
+
+  [type="submit"] {
+    font-family: "Jura", sans-serif;
+    width: 100%;
+    background:$activeMenu;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+  }
+  [type="submit"]:hover { background:$hoverMenu }
 }

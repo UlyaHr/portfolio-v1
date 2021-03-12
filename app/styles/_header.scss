@@ -19,7 +19,7 @@
       width: 326px;
       padding-top: 35px;
       padding-bottom: 105px;
-      background-color: var(--color-background);
+      background-color: var(--color-background2);
       border-radius: 4px;
 
       > a {
@@ -52,11 +52,19 @@
 
       @include darkmode-toggler
     }
+
+    .fade-in {
+      animation: fade-in 300ms ease-in-out forwards;
+    }
+    
+    .fade-out {
+      animation: fade-out 300ms ease-in-out forwards;
+    }
     
   }
 
   &--scrolled {
-    background-color: var(--color-background);
+    background-color: var(--color-background2);
     box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.2);
 
     a {
@@ -200,7 +208,7 @@
           top: 53px;
           height: 4px;
           border-radius: 2px;
-          background: $green-color;
+          background: $hoverMenu;
           opacity: 0;
           transition: opacity 300ms ease-in-out;
         }

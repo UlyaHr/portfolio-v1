@@ -72,19 +72,19 @@ html {
 }
 
 :root {
-  --color-main: #5EAFEF;
+  --color-main: #749DD6;
   --color-sec: #ff9349;
-  --color-background: #ffffff;
+  --color-background: #e8e9ec;
   --color-background2: #ffffff;
   --color-text: #676e8a;
   --color-accent: #4acb8a;
 }
 
 .dark {
-  --color-main: #749DD6;
+  --color-main: #5EAFEF;
   --color-background: #262a3f;
-  --color-background2: #121520;
-  --color-text: #ffffff;
+  --color-background2: #171a22;
+  --color-text: #e8e9ec;
   --color-accent: #f94348;
 }
 
@@ -99,7 +99,7 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.15;
   color: var(--color-main);
   margin-top: 0;
@@ -232,14 +232,6 @@ a:hover {
   }
 }
 
-.fade-in {
-  animation: fade-in 300ms ease-in-out forwards;
-}
-
-.fade-out {
-  animation: fade-out 300ms ease-in-out forwards;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -261,7 +253,7 @@ a:hover {
   width: 326px;
   padding-top: 35px;
   padding-bottom: 105px;
-  background-color: var(--color-background);
+  background-color: var(--color-background2);
   border-radius: 4px;
 }
 
@@ -492,8 +484,16 @@ a:hover {
   transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
+.header.menu-clicked .fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+.header.menu-clicked .fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
+}
+
 .header--scrolled {
-  background-color: var(--color-background);
+  background-color: var(--color-background2);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -627,7 +627,7 @@ a:hover {
     top: 53px;
     height: 4px;
     border-radius: 2px;
-    background: #4acb8a;
+    background: linear-gradient(to right, #76b852, #8dc26f);
     opacity: 0;
     transition: opacity 300ms ease-in-out;
   }
@@ -913,11 +913,11 @@ section {
 }
 
 .hero__divider .parallax4 use {
-  fill: var(--color-main);
+  fill: #0072ff;
 }
 
 .about {
-  background-color: var(--color-main);
+  background: linear-gradient(to top, #00c6ff, #0072ff);
   flex-direction: column;
   position: relative;
 }
@@ -1002,7 +1002,64 @@ section {
 }
 
 .contact {
-  background: linear-gradient(to right, #f86a32, #e73827);
+  flex-direction: column;
+}
+
+.contact form {
+  max-width: 420px;
+  margin: 50px auto;
+}
+
+.contact .feedback-input {
+  color: var(--color-text);
+  font-family: "Jura", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid var(--color-main);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.contact .feedback-input:focus {
+  border: 2px solid #4acb8a;
+  box-shadow: 0 0 3px #4acb8a;
+}
+
+.contact .feedback-input::placeholder {
+  color: var(--color-text);
+}
+
+.contact textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+.contact [type="submit"] {
+  font-family: "Jura", sans-serif;
+  width: 100%;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+.contact [type="submit"]:hover {
+  background: linear-gradient(to right, #76b852, #8dc26f);
 }
 
 .footer {
