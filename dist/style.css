@@ -59,6 +59,18 @@
   }
 }
 
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -74,7 +86,7 @@ html {
 :root {
   --color-main: #749DD6;
   --color-sec: #ff9349;
-  --color-background: #e8e9ec;
+  --color-background: #f3f3f3;
   --color-background2: #ffffff;
   --color-text: #676e8a;
   --color-accent: #4acb8a;
@@ -84,7 +96,7 @@ html {
   --color-main: #5EAFEF;
   --color-background: #262a3f;
   --color-background2: #171a22;
-  --color-text: #e8e9ec;
+  --color-text: #f3f3f3;
   --color-accent: #f94348;
 }
 
@@ -154,6 +166,7 @@ a:hover {
 
 .container {
   max-width: 69.375rem;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -201,6 +214,10 @@ a:hover {
 
 .flex-ac {
   align-items: center;
+}
+
+.flex-as {
+  align-items: stretch;
 }
 
 .button {
@@ -841,8 +858,24 @@ section {
 
 .hero {
   flex-direction: column;
+  align-items: flex-start;
   background: var(--color-background);
   position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.hero__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__content__left {
+  flex: 1;
+}
+
+.hero__content__right {
+  flex: 1;
 }
 
 .hero__divider {
@@ -1003,6 +1036,10 @@ section {
 
 .contact {
   flex-direction: column;
+}
+
+.contact__title {
+  padding-top: 80px;
 }
 
 .contact form {
@@ -1213,5 +1250,121 @@ section {
     justify-self: end;
     align-self: end;
   }
+}
+
+.contact button {
+  background-color: var(--color-main);
+  border-radius: 3px;
+  border: none;
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  letter-spacing: .5px;
+  line-height: 50px;
+  overflow: hidden;
+  outline: none;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms, color 150ms ease-in-out;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.contact button:hover {
+  background: linear-gradient(to right, #f86a32, #e73827);
+}
+
+.contact button span {
+  align-items: center;
+  display: flex;
+  float: left;
+  height: 100%;
+  justify-content: center;
+  max-width: 0;
+  position: relative;
+  left: -13px;
+  transform: translateX(-100%);
+  transition: max-width 50ms ease, opacity 100ms ease, transform 150ms ease-in-out;
+  width: 20px;
+}
+
+.contact button svg {
+  position: absolute;
+}
+
+.contact button svg:nth-child(1) {
+  --stroke: 40;
+  fill: transparent;
+  height: 20px;
+  left: 0;
+  stroke: white;
+  stroke-dasharray: var(--stroke);
+  stroke-dashoffset: calc(var(--stroke) * 2);
+  top: 15px;
+  width: 20px;
+}
+
+.contact button svg:nth-child(2) {
+  --stroke: 16;
+  fill: transparent;
+  height: 16px;
+  left: 50%;
+  stroke: transparent;
+  stroke-dasharray: var(--stroke);
+  stroke-dashoffset: var(--stroke);
+  top: 25px;
+  transform: translate3d(-5px, -3px, 0);
+  transition: stroke 300ms;
+  width: 16px;
+}
+
+.contact button.-request, .contact button.-success, .contact button.-failed {
+  text-align: center;
+  pointer-events: none;
+}
+
+.contact button.-request span, .contact button.-success span, .contact button.-failed span {
+  max-width: initial;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact button.-request {
+  background-color: #5EAFEF;
+}
+
+.contact button.-request svg:nth-child(1) {
+  animation: stroke 2s linear infinite forwards, rotate 1s linear infinite forwards;
+}
+
+.contact button.-success {
+  background-color: #4acb8a;
+}
+
+.contact button.-success svg:nth-child(1) {
+  fill: #fff;
+  stroke-dasharray: 0;
+}
+
+.contact button.-success svg:nth-child(2) {
+  animation: stroke 300ms ease-in-out forwards;
+  stroke: #4acb8a;
+}
+
+.contact button.-failed {
+  background-color: #f94348;
+}
+
+.contact button.-failed svg:nth-child(1) {
+  animation: stroke 300ms ease-in-out forwards;
+  stroke: #f94348;
 }
 /*# sourceMappingURL=style.css.map */
