@@ -88,7 +88,8 @@ html {
   --color-sec: #ff9349;
   --color-background: #f3f3f3;
   --color-background2: #ffffff;
-  --color-text: #676e8a;
+  --color-text: #262a3f;
+  --color-text2: #676e8a;
   --color-accent: #4acb8a;
 }
 
@@ -862,25 +863,130 @@ section {
   background: var(--color-background);
   position: relative;
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 90px;
 }
 
 .hero__content {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
 }
 
+@media (min-width: 64em) {
+  .hero__content {
+    flex-direction: row;
+  }
+}
+
 .hero__content__left {
-  flex: 1;
+  flex: auto;
+}
+
+@media (min-width: 64em) {
+  .hero__content__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.hero__content__left h1 {
+  font-size: 2.375rem;
+}
+
+@media (min-width: 64em) {
+  .hero__content__left h1 {
+    font-size: 3.25rem;
+  }
+}
+
+.hero__content__left h2 {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 64em) {
+  .hero__content__left h2 {
+    font-size: 2.375rem;
+  }
+}
+
+.hero__content__left h3 {
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+@media (min-width: 64em) {
+  .hero__content__left h3 {
+    font-size: 1.125rem;
+  }
+}
+
+.hero__content__left p {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+@media (min-width: 64em) {
+  .hero__content__left p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__content__left p:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+.hero__content__left .button {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 40em) {
+  .hero__content__left .button {
+    width: auto;
+    margin: unset;
+    display: inline-block;
+  }
+}
+
+.hero__content__left .button:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 40em) {
+  .hero__content__left .button:not(:last-child) {
+    margin-right: 15px;
+  }
 }
 
 .hero__content__right {
   flex: 1;
 }
 
+.hero__content__right lottie-player {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+@media (min-width: 64em) {
+  .hero__content__right lottie-player {
+    width: 400px;
+    height: 400px;
+    margin: unset;
+    margin-left: auto;
+  }
+}
+
 .hero__divider {
   position: absolute;
-  bottom: -5px;
+  bottom: -7px;
   left: 0;
   width: 100%;
 }
@@ -961,7 +1067,7 @@ section {
 
 .about__divider {
   position: absolute;
-  bottom: -5px;
+  bottom: -7px;
   left: 0;
   width: 100%;
 }
