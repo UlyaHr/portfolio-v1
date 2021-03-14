@@ -15,6 +15,7 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/dist/style.css" />
     <title>🚀 Final Project</title>
   </head>
@@ -117,7 +118,64 @@
       </section>
 
       <section class="about" id="about">
-        <h1>About Me</h1>
+        <div class="container container--px flex flex-dc flex-ac flex-jc">
+          <h1>About Me</h1>
+          <div class="blog-slider">
+            <div class="blog-slider__wrp swiper-wrapper">
+              <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                  
+                  <img src="images/intro.webp" alt="">
+                </div>
+                <div class="blog-slider__content">
+                  <span class="blog-slider__code">Hello, I am</span>
+                  <div class="blog-slider__title">Ulya Habiburrahman.</div>
+                  <div class="blog-slider__text">I enjoy channeling my creativity and logical thinking through crafting Front-end stack. My goal is to always build products that provide pixel-perfect, performant experiences. </div>
+                </div>
+              </div>
+              <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                  <img src="images/skills.webp" alt="">
+                </div>
+                <div class="blog-slider__content">
+                  <span class="blog-slider__code">TECHNICAL SKILLS</span>
+                  <div class="blog-slider__title">Frontend Developer</div>
+                  <div class="blog-slider__text">
+                    Technologies I've working with recently:
+                    <div class="skills-container">
+                      <span>React</span>
+                      <span>Javascript (ES6+)</span>
+                      <span>HTML & (S)CSS</span>
+                      <span>PWA</span>
+                      <span>Bootstrap 4+</span>
+                      <span>Node.js</span>
+                    </div>
+                    Tools:
+                    <div class="tools-container">
+                      <span>Chrome</span>
+                      <span>VS Code</span>
+                      <span>Postman</span>
+                      <span>Git</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="blog-slider__item swiper-slide">
+                <div class="blog-slider__img">
+                  <img src="images/academic.webp" alt="">
+                </div>
+                <div class="blog-slider__content">
+                  <span class="blog-slider__code">ACADEMIC BACKGROUND</span>
+                  <div class="blog-slider__title">Bachelor of Science</div>
+                  <div class="blog-slider__text">I was graduated from Universitas Gadjah Mada, where I was majoring in Geophysics. During college I became Computation Lab Asistant that teach sophomore student about Data Processing and Visualization using Python 3.</div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="blog-slider__pagination"></div>
+          </div>
+        </div>
         <div class="about__divider">
           <svg
             class="editorial"
@@ -375,7 +433,8 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="app/script/index.js" type="module"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>

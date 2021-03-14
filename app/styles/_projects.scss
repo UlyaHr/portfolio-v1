@@ -1,7 +1,10 @@
 .projects {
 
   padding-top: 120px;
-  padding-bottom: 70px;
+  
+  @include breakpoint-up(large) {
+    padding-bottom: 70px;
+  }
 
   &__grid {
     margin-top: 30px;
