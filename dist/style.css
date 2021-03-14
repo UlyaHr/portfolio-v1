@@ -1158,6 +1158,7 @@ section {
 
 .contact {
   flex-direction: column;
+  padding-bottom: 100px;
 }
 
 .contact__title {
@@ -1196,7 +1197,7 @@ section {
 }
 
 .contact textarea {
-  height: 150px;
+  height: 80px;
   line-height: 150%;
   resize: vertical;
 }
@@ -1539,6 +1540,7 @@ section {
   width: 11px;
   height: 11px;
   display: block;
+  outline: none;
   border-radius: 10px;
   background: var(--color-main);
   opacity: 0.3;
@@ -1811,7 +1813,53 @@ section {
   margin-bottom: 30px;
 }
 
-.contact button {
+.contact .container {
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 64em) {
+  .contact .container {
+    flex-direction: row;
+  }
+}
+
+.contact .social__links {
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .contact .social__links {
+    width: 50%;
+  }
+}
+
+.contact .social__links p {
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.contact .social__links--wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact .social__links--wrapper lottie-player {
+  margin-right: 6px;
+}
+
+.contact form {
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .contact form {
+    width: 50%;
+  }
+}
+
+.contact form button {
   background-color: var(--color-main);
   border-radius: 0.5rem;
   border: none;
@@ -1837,11 +1885,11 @@ section {
   width: 100%;
 }
 
-.contact button:hover {
+.contact form button:hover {
   background: linear-gradient(to right, #76b852, #8dc26f);
 }
 
-.contact button span {
+.contact form button span {
   align-items: center;
   display: flex;
   float: left;
@@ -1855,11 +1903,11 @@ section {
   width: 20px;
 }
 
-.contact button svg {
+.contact form button svg {
   position: absolute;
 }
 
-.contact button svg:nth-child(1) {
+.contact form button svg:nth-child(1) {
   --stroke: 40;
   fill: transparent;
   height: 20px;
@@ -1871,7 +1919,7 @@ section {
   width: 20px;
 }
 
-.contact button svg:nth-child(2) {
+.contact form button svg:nth-child(2) {
   --stroke: 16;
   fill: transparent;
   height: 16px;
@@ -1885,48 +1933,48 @@ section {
   width: 16px;
 }
 
-.contact button.-request, .contact button.-success, .contact button.-failed {
+.contact form button.-request, .contact form button.-success, .contact form button.-failed {
   text-align: center;
   pointer-events: none;
 }
 
-.contact button.-request span, .contact button.-success span, .contact button.-failed span {
+.contact form button.-request span, .contact form button.-success span, .contact form button.-failed span {
   max-width: initial;
   opacity: 1;
   transform: translateX(0);
 }
 
-.contact button.-request {
+.contact form button.-request {
   background: #5EAFEF;
   box-shadow: 0px 5px 0px #157fd2;
 }
 
-.contact button.-request svg:nth-child(1) {
+.contact form button.-request svg:nth-child(1) {
   animation: stroke 2s linear infinite forwards, rotate 1s linear infinite forwards;
 }
 
-.contact button.-success {
+.contact form button.-success {
   background: linear-gradient(to right, #76b852, #8dc26f);
   opacity: 1;
 }
 
-.contact button.-success svg:nth-child(1) {
+.contact form button.-success svg:nth-child(1) {
   fill: #fff;
   stroke-dasharray: 0;
 }
 
-.contact button.-success svg:nth-child(2) {
+.contact form button.-success svg:nth-child(2) {
   animation: stroke 300ms ease-in-out forwards;
   stroke: #4acb8a;
 }
 
-.contact button.-failed {
+.contact form button.-failed {
   background: #f94348 !important;
   box-shadow: 0px 5px 0px #cf070c;
   opacity: 1;
 }
 
-.contact button.-failed svg:nth-child(1) {
+.contact form button.-failed svg:nth-child(1) {
   animation: stroke 300ms ease-in-out forwards;
   stroke: #f94348;
 }
