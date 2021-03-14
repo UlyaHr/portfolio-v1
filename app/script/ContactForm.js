@@ -45,7 +45,7 @@ export function ContactForm() {
           </span>
           Success!
         `;
-        setTimeout(resetForm, 2000);
+        setTimeout(resetForm, 2500);
       })
       .catch((error) => {
         console.error("Error!", error.message)
@@ -55,7 +55,7 @@ export function ContactForm() {
           <span class="fas fa-exclamation-circle"></span>
           Oops! Try again in few sec..
         `;
-        setTimeout(resetButton, 3000);
+        setTimeout(resetButton, 3500);
       });
   });
 }

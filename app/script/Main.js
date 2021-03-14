@@ -3,7 +3,7 @@ export function Main() {
   const bubble = document.querySelector('.header__links--active');
 
   const option = {
-    threshold: 0.7,
+    threshold: 0.5,
     rootMargin: "100px"
   }
 
@@ -16,7 +16,7 @@ export function Main() {
         width: linkPosition.width,
         left: linkPosition.left
       };
-
+      
       if(entry.isIntersecting) {
         bubble.style.setProperty('width',`${direction.width}px`)
         bubble.style.setProperty('height', '4px')

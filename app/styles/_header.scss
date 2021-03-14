@@ -78,7 +78,7 @@
   
 
   &__logo {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 700;
     color: var(--color-text);
   }
@@ -175,6 +175,7 @@
   left: 0;
   background: #2d314d;
   background: linear-gradient(#2d314d, transparent);
+  backdrop-filter: blur(3px);
 }
 
 

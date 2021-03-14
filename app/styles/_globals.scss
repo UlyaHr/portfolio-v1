@@ -25,6 +25,7 @@ html {
   --color-background: #{$bg-dark};
   --color-background2: #{$bg-dark2};
   --color-text: #{$bg-light};
+  --color-text2: #{$bg-light};
   --color-accent: #{$red-color};
 }
 
@@ -139,15 +140,23 @@ a:hover {
   &-as {
     align-items:stretch;
   }
+  &-dc {
+    flex-direction: column;
+  }
+}
+
+.grid {
+  display: grid;
 }
 
 .button {
   display: inline-block;
   padding: 0.8125rem 2.1522rem;
-  border-radius: 1.5rem;
+  border-radius: 0.5rem;
   border: none;
-  background: $gradient;
+  background: $hoverMenu;
   color: $lightshade;
+  box-shadow: 0px 5px 0px darken($color: #76b852, $amount: 10%);
   opacity: 0.8;
   font-size: $font-sm;
   font-weight: 700;
@@ -155,6 +164,12 @@ a:hover {
 
   &:hover {
     opacity: 1;
+  }
+
+  &:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
   }
 }
 
