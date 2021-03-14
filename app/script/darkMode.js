@@ -6,13 +6,13 @@ export function DarkMode() {
   const enableDarkMode = () => {
     document.body.classList.add('dark');
     localStorage.setItem('darkMode', 'enabled');
-    heroLottie.load('lotties/codepen-green.json');
+    heroLottie.load('lotties/hero-dark.json');
   }
 
   const disableDarkMode = () => {
     document.body.classList.remove('dark');
     localStorage.setItem('darkMode', null);
-    heroLottie.load('lotties/github-green.json');
+    heroLottie.load('lotties/hero-light.json');
   }
 
   if (darkModeLS === 'enabled') {
