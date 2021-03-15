@@ -1791,9 +1791,6 @@ section {
     bottom: 0;
     z-index: -1;
   }
-}
-
-@media (min-width: 640px) and (max-width: 64em) {
   .projects .project-card.alt {
     flex-direction: row-reverse;
   }
@@ -1992,7 +1989,7 @@ section {
     display: grid;
     grid-template-columns: 1.44fr 1fr 1fr 2.27fr;
     grid-template-rows: 1fr auto;
-    grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+    grid-template-areas: "logo links1 links2 cta" "logo links1 links2 copyright";
     justify-items: start;
     align-items: stretch;
   }
@@ -2008,8 +2005,9 @@ section {
 }
 
 .footer__logo {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 700;
+  align-self: center;
 }
 
 @media (max-width: 64em) {

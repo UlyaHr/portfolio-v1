@@ -10,7 +10,7 @@ export function About() {
     //   invert: false,
     // },
     autoplay: {
-      delay: 5000,
+      delay: 3000,
       disableOnInteraction: true,
     },
     // autoHeight: true,

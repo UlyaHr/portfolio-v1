@@ -3,8 +3,8 @@ export function Main() {
   const bubble = document.querySelector('.header__links--active');
 
   const option = {
-    threshold: 0.5,
-    rootMargin: "100px"
+    threshold: 0.3,
+    rootMargin: "80px"
   }
 
   const navCheck = entries => {

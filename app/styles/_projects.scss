@@ -218,21 +218,21 @@
         }
       }
 
-      @include breakpoint-down(large) {
-        &.alt {
-          flex-direction: row-reverse;
-          .description {
-            &:before {
-              left: inherit;
-              right: -10px;
-              transform: skew(3deg);
-            }
-          }
-          .details {
-            padding-left: 25px;
+      &.alt {
+        flex-direction: row-reverse;
+        .description {
+          &:before {
+            left: inherit;
+            right: -10px;
+            transform: skew(3deg);
           }
         }
+        .details {
+          padding-left: 25px;
+        }
       }
+      // @include breakpoint-down(large) {
+      // }
     }
   }
 
