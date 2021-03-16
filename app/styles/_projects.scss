@@ -1,5 +1,5 @@
 .projects {
-
+  background: var(--color-background);
   padding-top: 120px;
   
   @include breakpoint-up(large) {
@@ -26,15 +26,6 @@
     .project-3 { grid-area: p3; }
     
     .project-4 { grid-area: p4; }
-    
-    // @include breakpoint-up(large) {
-    //   grid-template-columns: repeat(2, 1fr);
-    //   grid-template-rows: repeat(2, 1fr);
-    //   gap: 1em 1em;
-    //   grid-template-areas:
-    //     "p1 p2"
-    //     "p3 p4";
-    // }
   }
 
   .project-card {
@@ -47,22 +38,26 @@
     border-radius: 5px;
     overflow: hidden;
     z-index: 0;
+
     a {
       color: var(--main-color);
       &:hover {
         color: $green-color;
       }
     }
+
     &:hover {
       .photo {
         transform: scale(1.3) rotate(3deg);
       }
     }
+
     .meta {
       position: relative;
       z-index: 0;
       height: 200px;
     }
+
     .photo {
       position: absolute;
       top: 0;
@@ -73,6 +68,7 @@
       background-position: center;
       transition: transform 0.2s;
     }
+
     .details,
     .details ul {
       margin: auto;
@@ -92,12 +88,15 @@
       padding: 10px;
       width: 100%;
       font-size: 0.9rem;
+
       a {
         text-decoration: none;
       }
+
       ul li {
         display: inline-block;
       }
+
       .author:before {
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
@@ -119,6 +118,7 @@
           content: "\f02b";
           margin-right: 10px;
         }
+
         li {
           padding: 1px 3px;
           background: $gradient;
@@ -131,20 +131,19 @@
         }
       }
     }
+
     .description {
       padding: 1rem;
       background: var(--color-background2);
       position: relative;
       z-index: 1;
-      // h1,
-      // h2 {
-      //   font-family: Poppins, sans-serif;
-      // }
+
       h1 {
         line-height: 1;
         margin: 0;
         font-size: 1.7rem;
       }
+
       h2 {
         font-size: 1rem;
         font-weight: 300;
@@ -152,6 +151,7 @@
         color: var(--color-text2);
         margin-top: 5px;
       }
+
       .read-more {
         text-align: right;
         a {
@@ -174,12 +174,16 @@
           }
         }
       }
+
     }
+
     p {
       position: relative;
       margin: 1rem 0 0;
+
       &:first-of-type {
         margin-top: 1.25rem;
+
         &:before {
           content: "";
           position: absolute;
@@ -191,6 +195,7 @@
         }
       }
     }
+
     &:hover {
       .details {
         left: 0%;
@@ -199,10 +204,12 @@
 
     @media (min-width: 640px) {
       flex-direction: row;
+
       .meta {
         flex-basis: 40%;
         height: auto;
       }
+
       .description {
         flex-basis: 60%;
         &:before {
@@ -220,6 +227,7 @@
 
       &.alt {
         flex-direction: row-reverse;
+
         .description {
           &:before {
             left: inherit;
@@ -227,12 +235,11 @@
             transform: skew(3deg);
           }
         }
+
         .details {
           padding-left: 25px;
         }
       }
-      // @include breakpoint-down(large) {
-      // }
     }
   }
 

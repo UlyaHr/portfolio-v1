@@ -1071,10 +1071,6 @@ section {
   fill: #0072ff;
 }
 
-.features {
-  background: var(--color-background);
-}
-
 .contact {
   flex-direction: column;
   padding-bottom: 100px;
@@ -1559,6 +1555,7 @@ section {
 }
 
 .projects {
+  background: var(--color-background);
   padding-top: 120px;
 }
 
