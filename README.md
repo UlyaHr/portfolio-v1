@@ -4,7 +4,7 @@ This is my first web portfolio that highlight some of project I've done in the p
 
 > Final project for AMNT X Glints FP Class on Progate
 
-### 🚀 <a target="_blank" href="https://ulyahr.github.io/portfolio-v1/">Go to Web</a> 
+### Live Demo:  [![Netlify Status](https://api.netlify.com/api/v1/badges/05740691-6d49-443d-b26b-8460eaa8b7c8/deploy-status)](https://app.netlify.com/sites/ulyahr/deploys)
 
 ### 💻 Technology Used:
 
