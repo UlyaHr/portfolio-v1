@@ -245,7 +245,7 @@ section {
   border-radius: 0.5rem;
   border: none;
   background: linear-gradient(to right, #76b852, #8dc26f);
-  color: #f1f4fd;
+  color: #f3f3f3;
   box-shadow: 0px 5px 0px #5e983f;
   opacity: 0.8;
   font-size: 0.875rem;
@@ -1080,7 +1080,7 @@ section {
 }
 
 .about h1 {
-  color: #f1f4fd;
+  color: #ffffff;
 }
 
 .about__divider {
@@ -1971,8 +1971,8 @@ section {
 }
 
 .footer {
-  background-color: #2F4858;
-  color: #f1f4fd;
+  background-color: #171a22;
+  color: #f3f3f3;
   padding-top: 2.1875rem;
   padding-bottom: 2.1875rem;
   text-align: center;
@@ -1990,12 +1990,12 @@ section {
 }
 
 .footer a {
-  color: #f1f4fd;
+  color: #f3f3f3;
   display: inline-block;
 }
 
 .footer a:hover {
-  color: #FB743E;
+  color: #ff9349;
 }
 
 .footer__logo {
@@ -2014,31 +2014,6 @@ section {
   .footer__logo {
     grid-area: logo;
   }
-}
-
-@media (max-width: 64em) {
-  .footer__social {
-    margin-bottom: 2.0625rem;
-  }
-}
-
-@media (min-width: 64em) {
-  .footer__social {
-    grid-area: social;
-    align-self: end;
-  }
-}
-
-.footer__social a svg path {
-  transition: fill 150ms ease-in-out;
-}
-
-.footer__social a:hover svg path {
-  fill: #FB743E;
-}
-
-.footer__social a:not(:last-child) {
-  margin-right: 0.8125rem;
 }
 
 .footer__links {
@@ -2104,11 +2079,11 @@ section {
 }
 
 .footer__cta .button:hover {
-  color: #f1f4fd;
+  color: #f3f3f3;
 }
 
 .footer__copyright {
-  color: #f1f4fd;
+  color: #f3f3f3;
   font-size: 0.9875rem;
 }
 
