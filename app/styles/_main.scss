@@ -135,35 +135,6 @@ section {
     }
   }
 }
-.about {
-  background: linear-gradient(to top, #00c6ff, #0072ff);
-  flex-direction: column;
-  position: relative;
-
-  h1 {
-    color: $lightshade;
-  }
-
-  &__divider {
-    @include section-divider;
-
-    .parallax1 use{
-      fill: var(--color-text);
-      opacity: 0.4;
-    }
-    .parallax2 use{
-      fill: var(--color-sec);
-      opacity: 0.4;
-    }
-    .parallax3 use{
-      fill: var(--color-accent);
-      opacity: 0.4;
-    }
-    .parallax4 use{
-      fill: var(--color-background);
-    }
-  }
-}
 
 .features {
   background: var(--color-background);
