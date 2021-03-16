@@ -1,7 +1,7 @@
 .projects {
   background: var(--color-background);
   padding-top: 120px;
-  
+
   @include breakpoint-up(large) {
     padding-bottom: 70px;
   }
@@ -18,14 +18,22 @@
       "p2"
       "p3"
       "p4";
-    
-    .project-1 { grid-area: p1; }
-    
-    .project-2 { grid-area: p2; }
-    
-    .project-3 { grid-area: p3; }
-    
-    .project-4 { grid-area: p4; }
+
+    .project-1 {
+      grid-area: p1;
+    }
+
+    .project-2 {
+      grid-area: p2;
+    }
+
+    .project-3 {
+      grid-area: p3;
+    }
+
+    .project-4 {
+      grid-area: p4;
+    }
   }
 
   .project-card {
@@ -98,14 +106,14 @@
       }
 
       .author:before {
-        font-family: 'Font Awesome 5 Free';
+        font-family: "Font Awesome 5 Free";
         font-weight: 900;
         margin-right: 10px;
         content: "\f007";
       }
 
       .date:before {
-        font-family: 'Font Awesome 5 Free';
+        font-family: "Font Awesome 5 Free";
         font-weight: 900;
         margin-right: 10px;
         content: "\f133";
@@ -113,7 +121,7 @@
 
       .tags {
         ul:before {
-          font-family: 'Font Awesome 5 Free';
+          font-family: "Font Awesome 5 Free";
           font-weight: 900;
           content: "\f02b";
           margin-right: 10px;
@@ -160,7 +168,7 @@
           position: relative;
           &:after {
             content: "\f061";
-            font-family: 'Font Awesome 5 Free';
+            font-family: "Font Awesome 5 Free";
             font-weight: 900;
             margin-left: -10px;
             opacity: 0;
@@ -174,7 +182,6 @@
           }
         }
       }
-
     }
 
     p {

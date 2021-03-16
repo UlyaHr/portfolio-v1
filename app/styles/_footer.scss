@@ -1,6 +1,6 @@
 .footer {
   background-color: $bg-dark2;
-  color: $bg-light;  
+  color: $bg-light;
   padding-top: 2.1875rem;
   padding-bottom: 2.1875rem;
   text-align: center;
@@ -65,7 +65,7 @@
         }
       }
     }
-    
+
     &.col2 {
       @include breakpoint-down(large) {
         margin-bottom: 2rem;
@@ -84,7 +84,6 @@
   }
 
   &__cta {
-
     @include breakpoint-up(large) {
       grid-area: cta;
       justify-self: end;
@@ -103,9 +102,9 @@
 
   &__copyright {
     .fas {
-      color: #EA7384;
+      color: #ea7384;
     }
-    
+
     @include breakpoint-up(large) {
       grid-area: copyright;
       justify-self: end;

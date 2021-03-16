@@ -50,17 +50,16 @@
       margin: 0 auto;
       z-index: 9999;
 
-      @include darkmode-toggler
+      @include darkmode-toggler;
     }
 
     .fade-in {
       animation: fade-in 300ms ease-in-out forwards;
     }
-    
+
     .fade-out {
       animation: fade-out 300ms ease-in-out forwards;
     }
-    
   }
 
   &--scrolled {
@@ -75,7 +74,6 @@
       stroke: var(--color-text);
     }
   }
-  
 
   &__logo {
     font-size: 40px;
@@ -110,44 +108,46 @@
       display: block;
       position: absolute;
       path {
-          transition: stroke-dasharray var(--duration, .85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, .85s) var(--easing, ease) var(--delay, 0s);
-          stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
-          stroke-dashoffset: var(--offset, 126px);
-          transform: translateZ(0);
-          &:nth-child(2) {
-              --duration: .7s;
-              --easing: ease-in;
-              --offset: 100px;
-              --array-2: 74px;
-          }
-          &:nth-child(3) {
-              --offset: 133px;
-              --array-2: 107px;
-          }
+        transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease)
+            var(--delay, 0s),
+          stroke-dashoffset var(--duration, 0.85s) var(--easing, ease)
+            var(--delay, 0s);
+        stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+        stroke-dashoffset: var(--offset, 126px);
+        transform: translateZ(0);
+        &:nth-child(2) {
+          --duration: 0.7s;
+          --easing: ease-in;
+          --offset: 100px;
+          --array-2: 74px;
+        }
+        &:nth-child(3) {
+          --offset: 133px;
+          --array-2: 107px;
+        }
       }
     }
-    
-    &.active {
-        svg {
-            path {
-                --offset: 57px;
-                &:nth-child(1),
-                &:nth-child(3) {
-                    --delay: .15s;
-                    --easing: cubic-bezier(.2, .4, .2, 1.1);
-                }
-                &:nth-child(2) {
-                    --duration: .4s;
-                    --offset: 2px;
-                    --array-1: 1px;
-                }
-                &:nth-child(3) {
-                    --offset: 58px;
-                }
-            }
-        }
-    }
 
+    &.active {
+      svg {
+        path {
+          --offset: 57px;
+          &:nth-child(1),
+          &:nth-child(3) {
+            --delay: 0.15s;
+            --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
+          }
+          &:nth-child(2) {
+            --duration: 0.4s;
+            --offset: 2px;
+            --array-1: 1px;
+          }
+          &:nth-child(3) {
+            --offset: 58px;
+          }
+        }
+      }
+    }
   }
 
   &__links {
@@ -177,8 +177,6 @@
   background: linear-gradient(#2d314d, transparent);
   backdrop-filter: blur(3px);
 }
-
-
 
 .header {
   @include breakpoint-up(large) {
@@ -248,6 +246,5 @@
 
       @include darkmode-toggler;
     }
-
   }
 }

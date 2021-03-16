@@ -84,7 +84,7 @@ html {
 }
 
 :root {
-  --color-main: #749DD6;
+  --color-main: #749dd6;
   --color-sec: #ff9349;
   --color-background: #f3f3f3;
   --color-background2: #ffffff;
@@ -94,7 +94,7 @@ html {
 }
 
 .dark {
-  --color-main: #5EAFEF;
+  --color-main: #5eafef;
   --color-background: #262a3f;
   --color-background2: #171a22;
   --color-text: #f3f3f3;
@@ -339,15 +339,15 @@ section {
   position: relative;
   width: 90px;
   height: 50px;
-  background-color: #83D8FF;
+  background-color: #83d8ff;
   border: 5px solid;
   border-radius: 84px;
   transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  border-top-color: #2A9DF4;
-  border-right-color: #2A9DF4;
-  border-bottom-color: #2A9DF4;
-  border-left-color: #2A9DF4;
-  transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.015s, border-bottom-color 0.15s linear 0.030s, border-left-color 0.15s linear 0.045s;
+  border-top-color: #2a9df4;
+  border-right-color: #2a9df4;
+  border-bottom-color: #2a9df4;
+  border-left-color: #2a9df4;
+  transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.015s, border-bottom-color 0.15s linear 0.03s, border-left-color 0.15s linear 0.045s;
 }
 
 .header.menu-clicked .darkmode__toggle .toggle:before {
@@ -381,7 +381,7 @@ section {
 
 .header.menu-clicked .darkmode__toggle .handler .crater {
   position: absolute;
-  background-color: #E8CDA5;
+  background-color: #e8cda5;
   opacity: 0;
   transition: opacity 200ms ease-in-out;
   border-radius: 100%;
@@ -474,16 +474,16 @@ section {
 }
 
 .header.menu-clicked .darkmode__toggle input:checked + .toggle {
-  background-color: #749DD6;
+  background-color: #749dd6;
   border-top-color: #605885;
   border-right-color: #605885;
   border-bottom-color: #605885;
   border-left-color: #605885;
-  transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.015s, border-bottom-color 0.15s linear 0.030s, border-left-color 0.15s linear 0.045s;
+  transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.015s, border-bottom-color 0.15s linear 0.03s, border-left-color 0.15s linear 0.045s;
 }
 
 .header.menu-clicked .darkmode__toggle input:checked + .toggle .handler {
-  background-color: #FFE5B5;
+  background-color: #ffe5b5;
   transform: translate3d(40px, 0, 0) rotate(0);
 }
 
@@ -590,7 +590,7 @@ section {
 }
 
 .header__menu svg path:nth-child(2) {
-  --duration: .7s;
+  --duration: 0.7s;
   --easing: ease-in;
   --offset: 100px;
   --array-2: 74px;
@@ -606,12 +606,12 @@ section {
 }
 
 .header__menu.active svg path:nth-child(1), .header__menu.active svg path:nth-child(3) {
-  --delay: .15s;
-  --easing: cubic-bezier(.2, .4, .2, 1.1);
+  --delay: 0.15s;
+  --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
 }
 
 .header__menu.active svg path:nth-child(2) {
-  --duration: .4s;
+  --duration: 0.4s;
   --offset: 2px;
   --array-1: 1px;
 }
@@ -710,15 +710,15 @@ section {
     position: relative;
     width: 90px;
     height: 50px;
-    background-color: #83D8FF;
+    background-color: #83d8ff;
     border: 5px solid;
     border-radius: 84px;
     transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    border-top-color: #2A9DF4;
-    border-right-color: #2A9DF4;
-    border-bottom-color: #2A9DF4;
-    border-left-color: #2A9DF4;
-    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.015s, border-bottom-color 0.15s linear 0.030s, border-left-color 0.15s linear 0.045s;
+    border-top-color: #2a9df4;
+    border-right-color: #2a9df4;
+    border-bottom-color: #2a9df4;
+    border-left-color: #2a9df4;
+    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.015s, border-bottom-color 0.15s linear 0.03s, border-left-color 0.15s linear 0.045s;
   }
   .header .darkmode__toggle .toggle:before {
     position: absolute;
@@ -748,7 +748,7 @@ section {
   }
   .header .darkmode__toggle .handler .crater {
     position: absolute;
-    background-color: #E8CDA5;
+    background-color: #e8cda5;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
     border-radius: 100%;
@@ -829,15 +829,15 @@ section {
     transform: translate3d(3px, 0, 0);
   }
   .header .darkmode__toggle input:checked + .toggle {
-    background-color: #749DD6;
+    background-color: #749dd6;
     border-top-color: #605885;
     border-right-color: #605885;
     border-bottom-color: #605885;
     border-left-color: #605885;
-    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.015s, border-bottom-color 0.15s linear 0.030s, border-left-color 0.15s linear 0.045s;
+    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.015s, border-bottom-color 0.15s linear 0.03s, border-left-color 0.15s linear 0.045s;
   }
   .header .darkmode__toggle input:checked + .toggle .handler {
-    background-color: #FFE5B5;
+    background-color: #ffe5b5;
     transform: translate3d(40px, 0, 0) rotate(0);
   }
   .header .darkmode__toggle input:checked + .toggle .handler .crater {
@@ -1596,21 +1596,21 @@ section {
 }
 
 .projects .project-card .details .author:before {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   margin-right: 10px;
   content: "\f007";
 }
 
 .projects .project-card .details .date:before {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   margin-right: 10px;
   content: "\f133";
 }
 
 .projects .project-card .details .tags ul:before {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f02b";
   margin-right: 10px;
@@ -1661,7 +1661,7 @@ section {
 
 .projects .project-card .description .read-more a:after {
   content: "\f061";
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   margin-left: -10px;
   opacity: 0;
@@ -1936,7 +1936,7 @@ section {
 }
 
 .contact form button.-request {
-  background: #5EAFEF;
+  background: #5eafef;
   box-shadow: 0px 5px 0px #157fd2;
 }
 
@@ -2088,7 +2088,7 @@ section {
 }
 
 .footer__copyright .fas {
-  color: #EA7384;
+  color: #ea7384;
 }
 
 @media (min-width: 64em) {
