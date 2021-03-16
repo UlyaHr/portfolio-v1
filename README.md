@@ -1,10 +1,12 @@
 # 🔥 Web Portfolio v1
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/05740691-6d49-443d-b26b-8460eaa8b7c8/deploy-status)](https://app.netlify.com/sites/ulyahr/deploys)
+
 This is my first web portfolio that highlight some of project I've done in the past.
 
 > Final project for AMNT X Glints FP Class on Progate
 
-### Live Demo:  [![Netlify Status](https://api.netlify.com/api/v1/badges/05740691-6d49-443d-b26b-8460eaa8b7c8/deploy-status)](https://app.netlify.com/sites/ulyahr/deploys)
+### 🚀 [Live Demo](https://ulyahr.netlify.app/)  
 
 ### 💻 Technology Used:
 
