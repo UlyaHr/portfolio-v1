@@ -1,30 +1,26 @@
 import Swiper from "https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js";
 
 export function About() {
-  const sliderCard = document.querySelector('.blog-slider');
+  const sliderCard = document.querySelector(".blog-slider");
   const swiper = new Swiper(".blog-slider", {
     spaceBetween: 30,
     effect: "fade",
     loop: true,
-    // mousewheel: {
-    //   invert: false,
-    // },
     autoplay: {
       delay: 3000,
       disableOnInteraction: true,
     },
-    // autoHeight: true,
     pagination: {
       el: ".blog-slider__pagination",
       clickable: true,
     },
   });
 
-  sliderCard.addEventListener('mouseenter', () => {
+  sliderCard.addEventListener("mouseenter", () => {
     swiper.autoplay.stop();
   });
 
-  sliderCard.addEventListener('mouseleave', () => {
+  sliderCard.addEventListener("mouseleave", () => {
     swiper.autoplay.start();
   });
 }
